@@ -15,7 +15,7 @@ before_script:
 
 script:
   - docker --version # print the version for logging
-  - docker build -t udacity-simple-node .
+  - docker build -t udacity-simple-node --build-arg FOOd=${FOOD} .
   - docker tag udacity-simple-node vintangible/udacity-simple-node:latest
 
 after_success:
